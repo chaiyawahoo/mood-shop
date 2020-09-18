@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    margin: 0;
+    margin: 6% 0 0 0;
 }
 
 .page-header {
@@ -10,16 +10,18 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1em;
     background-color: #abc;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .page-header h4 {
     font-size: 1.5em;
+    padding-left: 1em;
 }
 
 .page-header ul {
-    padding: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -28,6 +30,56 @@ body {
 
 .page-header a {
     display: block;
-    padding: 0.5em;
+    padding: 0.25em;
+    margin: 0.25em;
+    width: 4em;
+    text-align: center;
+    color: black;
+    border: 1px solid;
     text-decoration: none;
+    background-color: #cde;
+}
+
+.page-header a:hover {
+    background-color: #def;
+}
+
+.items {
+    padding: 2em 0 2em 0;
+    display: grid;
+    grid-template-columns: repeat(4, 25vw);
+    grid-row-gap: 4em;
+    justify-items: center;
+    position: absolute;
+    z-index: -1;
+}
+
+.item {
+    border: solid 1px;
+    width: 300px;
+    height: 500px;
+    position: relative;
+}
+
+.item img {
+    border-bottom: 1px solid;
+}
+
+.item p {
+    margin: 1em;
+}
+
+.item button {
+    width: 100%;
+    background-color: #cde;
+    padding: 0.5em;
+    border: none;
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid black;
+}
+
+.item button:hover {
+    background-color: #def;
+    cursor: pointer;
 }

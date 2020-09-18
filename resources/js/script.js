@@ -4,7 +4,7 @@ const itemsContainer = document.getElementById("items");
 
 function parseItems(item) {
     let newDiv = document.createElement("div");
-    newDiv.className = "items";
+    newDiv.className = "item";
 
     let img = document.createElement("img");
     img.src = item.image;
