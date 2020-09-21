@@ -3,6 +3,7 @@ body {
     font-size: 16px;
     line-height: 1.5;
     margin: 6% 0 0 0;
+    background-color: #cde;
 }
 
 .page-header {
@@ -10,13 +11,14 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: #abc;
+    background-color: #68a;
     position: fixed;
     top: 0;
     width: 100%;
 }
 
 .page-header h4 {
+    color: #def;
     font-size: 1.5em;
     padding-left: 1em;
 }
@@ -37,11 +39,11 @@ body {
     color: black;
     border: 1px solid;
     text-decoration: none;
-    background-color: #cde;
+    background-color: #ace;
 }
 
 .page-header a:hover {
-    background-color: #def;
+    background-color: #bdf;
 }
 
 .items {
@@ -59,6 +61,7 @@ body {
     width: 300px;
     height: 500px;
     position: relative;
+    background-color: #def;
 }
 
 .item img {
@@ -71,7 +74,7 @@ body {
 
 .item button {
     width: 100%;
-    background-color: #cde;
+    background-color: #ace;
     padding: 0.5em;
     border: none;
     position: absolute;
@@ -80,6 +83,10 @@ body {
 }
 
 .item button:hover {
-    background-color: #def;
+    background-color: #bdf;
     cursor: pointer;
+}
+
+.item button:active {
+    all: none;
 }

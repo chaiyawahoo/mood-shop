@@ -1,6 +1,7 @@
 import data from "./data.js";
 
 const itemsContainer = document.getElementById("items");
+const cart = []
 
 function parseItems(item) {
     let newDiv = document.createElement("div");
@@ -27,6 +28,15 @@ function parseItems(item) {
     newDiv.appendChild(price);
     newDiv.appendChild(button);
     itemsContainer.appendChild(newDiv);
+}
+
+function addItem(name, price) {
+    const item = {name: name, price: price, qty: 1};
+    cart.push(item);
+}
+
+function showItems() {
+    console.log(`You have ${cart.length} items in your cart`);
 }
 
 data.forEach(parseItems);
