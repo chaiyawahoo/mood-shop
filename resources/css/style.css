@@ -21,6 +21,7 @@ header {
     top: 0;
     width: 100%;
     height: 6em;
+    box-sizing: border-box;
     border-bottom: 1px solid black;
 }
 
@@ -68,6 +69,7 @@ header a:hover {
     height: 500px;
     position: relative;
     background-color: #def;
+    box-shadow: 10px 10px 2px rgba(0, 0, 0, 0.25);
 }
 
 .item img {
@@ -94,7 +96,7 @@ header a:hover {
 }
 
 .item button:active {
-    all: none;
+    
 }
 
 footer {
