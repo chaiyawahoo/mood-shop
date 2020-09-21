@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    margin: 6% 0 0 0;
+    margin: 0;
     background-color: #cde;
     display: flex;
     flex-direction: column;
@@ -10,7 +10,7 @@ body {
     height: 100%;
 }
 
-.page-header {
+header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -20,25 +20,27 @@ body {
     z-index: 1;
     top: 0;
     width: 100%;
+    height: 6em;
+    border-bottom: 1px solid black;
 }
 
-.page-header h4 {
+header h4 {
     color: #def;
     font-size: 1.5em;
-    padding-left: 1em;
+    padding: 0em 1em;
 }
 
-.page-header ul {
+header ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     list-style: none;
 }
 
-.page-header a {
+header a {
     display: block;
     padding: 0.25em;
-    margin: 0.25em;
+    margin: 0em 0.5em;
     width: 4em;
     text-align: center;
     color: black;
@@ -47,12 +49,12 @@ body {
     background-color: #ace;
 }
 
-.page-header a:hover {
+header a:hover {
     background-color: #bdf;
 }
 
 .items {
-    padding: 2em 0 2em 0;
+    padding: 8em 0 2em 0;
     display: grid;
     grid-template-columns: repeat(4, 25vw);
     grid-row-gap: 4em;
@@ -96,6 +98,54 @@ body {
 }
 
 footer {
+    padding: 0.5em 0em;
+    align-self: flex-start;
     position: absolute;
     top: 100%;
+    width: 100%;
+    color: #def;
+    background-color: #68a;
+    border-top: 1px solid black;
+}
+
+footer div, footer ul {
+    padding: 0em 0.5em 0em 0.5em;
+    margin: 0;
+}
+
+#item-list li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    list-style-position: inside;
+    padding-right: 0.5em;
+    margin: 0.5em 0.5em 0em 0em;
+    height: 2em;
+    position: relative;
+}
+
+#modify {
+    position: absolute;
+    right: 0;
+    padding-right: 0.5em;
+}
+
+#modify button, #modify input {
+    height: 2em;
+    padding: 0em 0.5em;
+    margin: 0em 0.5em;
+    border: 1px solid black;
+}
+
+#modify input {
+    background-color: #cde;
+    width: 5em;
+}
+
+#modify button {
+    background-color: #ace;
+}
+
+#modify button.add-one, #modify button.remove-one {
+    width: 2em;
 }
