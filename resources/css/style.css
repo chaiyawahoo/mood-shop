@@ -1,3 +1,9 @@
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
 body {
     font-family: Arial, sans-serif;
     font-size: 16px;
@@ -54,6 +60,29 @@ header a:hover {
     background-color: #bdf;
 }
 
+.parallax {
+    height: 100vh;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#home {
+    background-image: url("/resources/images/color-moods.png");
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-top: 5%;
+    box-sizing: border-box;
+    z-index: -1;
+}
+
+#home h1 {
+    position: fixed;
+    font-size: 5em;
+}
+
 .items {
     padding: 8em 0 2em 0;
     display: grid;
@@ -61,6 +90,7 @@ header a:hover {
     grid-row-gap: 4em;
     justify-items: center;
     height: 100%;
+    background-color: #cde;
 }
 
 .item {
