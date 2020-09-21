@@ -1,10 +1,20 @@
 import data from "./data.js";
 
 const itemsContainer = document.getElementById("items");
+
+data.forEach(parseItems);
+
+const allItemButtons = Array.from(document.querySelectorAll("button"));
+
+allItemButtons.forEach(elt => elt.addEventListener("click", () => {
+    addItem(elt.getAttribute("id"), elt.getAttribute("data-price"))
+    showItems()
+}));
+
+const cart = [];
 const cartQty = document.getElementById("cart-qty");
 const itemList = document.getElementById("item-list");
 const cartTotal = document.getElementById("cart-total");
-const cart = [];
 
 function parseItems(item) {
     let newDiv = document.createElement("div");
@@ -65,7 +75,7 @@ function showItems() {
     let itemStr = '';
     for (let i = 0; i < cart.length; i++) {
         const {name, price, qty} = cart[i];
-        itemStr += `<li>${name} $${price} x ${qty} = $${qty * price}</li>`;
+        itemStr += `<li>${name} $${price} x ${qty} = $${(qty * price).toFixed(2)}</li>`;
     }
     itemList.innerHTML = itemStr;
 
@@ -88,13 +98,10 @@ function getTotal() {
     }
     return total.toFixed(2);
 }
+// addItem("Apple", 0.99);
+// addItem("Orange", 1.29);
+// addItem("Apple", 0.99);
+// addItem("Orange", 1.29);
+// addItem("Opinion", 0.02);
 
-data.forEach(parseItems);
-
-addItem("Apple", 0.99);
-addItem("Orange", 1.29);
-addItem("Apple", 0.99);
-addItem("Orange", 1.29);
-addItem("Opinion", 0.02);
-
-showItems();
+// showItems();
