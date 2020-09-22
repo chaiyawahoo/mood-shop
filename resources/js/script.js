@@ -9,11 +9,23 @@ const cartTotal = document.getElementById("cart-total");
 
 data.forEach(parseItems);
 
-const allItemButtons = Array.from(document.querySelectorAll("button"));
+const allItemButtons = Array.from(document.getElementsByClassName("add-to-cart"));
 allItemButtons.forEach(elt => elt.addEventListener("click", () => {
     const {name, price} = elt.dataset;
     addItem(name, price);
 }));
+
+const imgButtons = Array.from(document.getElementsByClassName("pick-image"));
+imgButtons.forEach(elt => elt.addEventListener("click", () => {
+    const id = elt.dataset.id;
+    if (elt.parentElement.children[0].dataset.inum == 0) {
+        elt.parentElement.children[0].dataset.inum = 1;
+        elt.parentElement.children[0].src = data[id - 1].images[1];
+    } else {
+        elt.parentElement.children[0].dataset.inum = 0;
+        elt.parentElement.children[0].src = data[id - 1].images[0];
+    }
+}))
 
 itemList.onclick = function(e) {
     if (e.target) {
@@ -41,9 +53,15 @@ function parseItems(item) {
     newDiv.className = "item";
 
     let img = document.createElement("img");
-    img.src = item.image;
+    img.dataset.inum = 0;
+    img.src = item.images[0];
     img.width = 300;
     img.height = 300;
+
+    let nextImg = document.createElement("button");
+    nextImg.classList = ["pick-image"];
+    nextImg.innerText = ">>";
+    nextImg.dataset.id = item.id;
 
     let desc = document.createElement("p");
     desc.innerText = item.desc;
@@ -51,15 +69,17 @@ function parseItems(item) {
     let price = document.createElement("p");
     price.innerText = item.price;
 
-    let button = document.createElement("button");
-    button.dataset.name = item.name;
-    button.dataset.price = item.price;
-    button.innerHTML = "Add to Cart";
+    let addToCart = document.createElement("button");
+    addToCart.classList = ["add-to-cart"];
+    addToCart.dataset.name = item.name;
+    addToCart.dataset.price = item.price;
+    addToCart.innerText = "Add to Cart";
 
     newDiv.appendChild(img);
+    newDiv.appendChild(nextImg);
     newDiv.appendChild(desc);
     newDiv.appendChild(price);
-    newDiv.appendChild(button);
+    newDiv.appendChild(addToCart);
     itemsContainer.appendChild(newDiv);
 
     showItems();

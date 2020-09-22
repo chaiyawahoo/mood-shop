@@ -94,6 +94,8 @@ header a:hover {
 }
 
 .item {
+    display: flex;
+    flex-direction: column;
     border: solid 1px;
     width: 300px;
     height: 500px;
@@ -111,12 +113,23 @@ header a:hover {
 }
 
 .item button {
-    width: 100%;
     background-color: #ace;
     padding: 0.5em;
-    border: none;
+    border: 1px solid black;
+}
+
+.item .pick-image {
+    border-right: none;
+    border-top: none;
+    justify-self: flex-end;
+    align-self: flex-end;
+}
+
+.item .add-to-cart {
+    width: 100%;
     position: absolute;
     bottom: 0;
+    border: none;
     border-top: 1px solid black;
 }
 
@@ -125,8 +138,16 @@ header a:hover {
     cursor: pointer;
 }
 
+button:active {
+    outline: none;
+}
+
+button:focus {
+    outline: none;
+}
+
 .item button:active {
-    
+    outline: none;
 }
 
 footer {
