@@ -6,7 +6,7 @@ const data = [{
       "./resources/images/happy_jonah.gif"
     ],
     "desc": "Happiness lies in the joy of achievement and the thrill of creative effort.",
-    "price": 5.99
+    "price": 2.99
   }, {
     "id": 2,
     "name": 'sad',
@@ -15,7 +15,7 @@ const data = [{
       "./resources/images/sad.gif"
     ],
     "desc": "Tears are words that can’t be explained.",
-    "price": 5.99
+    "price": 4.99
   }, {
     "id": 3,
     "name": 'angry',
@@ -33,7 +33,7 @@ const data = [{
       "./resources/images/calm_garfiled.gif"
     ],
     "desc": "To be calm is the highest achievement of the self.",
-    "price": 5.99
+    "price": 2.99
   }, {
     "id": 5,
     "name": 'curious',
@@ -42,7 +42,7 @@ const data = [{
       "./resources/images/curious_1.gif"
     ],
     "desc": "I have no special talents. I am only passionately curious.",
-    "price": 5.99
+    "price": 2.99
   }, {
     "id": 6,
     "name": 'disgust',
@@ -60,7 +60,7 @@ const data = [{
       "./resources/images/energetic_goat.gif"
     ],
     "desc": "Be the energy you want to attract.",
-    "price": 5.99
+    "price": 2.99
   }, {
     "id": 8,
     "name": 'gloomy',
@@ -69,7 +69,7 @@ const data = [{
       "./resources/images/gloomy.gif"
     ],
     "desc": "All was black, gloomy and awful. There was no light at the end of the tunnel - or if there was, it was an oncoming train.",
-    "price": 5.99
+    "price": 4.99
   }, {
     "id": 9,
     "name": 'scared',
@@ -78,7 +78,7 @@ const data = [{
       "./resources/images/scared_cat.gif"
     ],
     "desc": "The only thing we have to fear is fear itself.",
-    "price": 5.99
+    "price": 3.99
   }, {
     "id": 10,
     "name": 'shy',
@@ -87,7 +87,7 @@ const data = [{
       "./resources/images/shy_1.gif"
     ],
     "desc": "When a shy person smiles, it's like the sun coming out.",
-    "price": 5.99
+    "price": 3.99
   }, {
     "id": 11,
     "name": 'sleepy',
@@ -96,7 +96,7 @@ const data = [{
       "./resources/images/sleepy_1.gif"
     ],
     "desc": "Your future depends on your dreams, so go to sleep.",
-    "price": 5.99
+    "price": 3.99
   }, {
     "id": 12,
     "name": 'surprised',
@@ -105,7 +105,7 @@ const data = [{
       "./resources/images/surprised.gif"
     ],
     "desc": "The only thing that should surprise us is that there are still some things that can surprise us.",
-    "price": 5.99
+    "price": 3.99
   }]
   
   export default data;

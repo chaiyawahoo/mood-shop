@@ -64,10 +64,12 @@ function parseItems(item) {
     nextImg.dataset.id = item.id;
 
     let desc = document.createElement("p");
+    desc.classList = ["desc"];
     desc.innerText = item.desc;
 
     let price = document.createElement("p");
-    price.innerText = item.price;
+    price.classList = ["price"];
+    price.innerText = `Price: $${item.price}`;
 
     let addToCart = document.createElement("button");
     addToCart.classList = ["add-to-cart"];
