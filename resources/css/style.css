@@ -69,7 +69,7 @@ header a:hover {
 }
 
 #home {
-    background-image: url("/resources/images/color-moods.png");
+    background-image: url("../images/color-moods.png");
     display: flex;
     width: 100%;
     justify-content: center;
