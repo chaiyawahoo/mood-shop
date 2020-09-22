@@ -94,10 +94,6 @@ header a:hover {
 }
 
 .item {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
     border: solid 1px;
     width: 300px;
     height: 500px;
@@ -121,9 +117,10 @@ header a:hover {
 }
 
 .item .pick-image {
+    position: absolute;
+    top: 300px;
+    right: 0;
     border-right: none;
-    border-top: none;
-    align-self: flex-end;
 }
 
 .item .add-to-cart {
